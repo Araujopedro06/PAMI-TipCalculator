@@ -1,1 +1,2 @@
-# PAM1-tipcalculator
+# PAMI-TipCalculator
+Calculadora utilizando .NET MAUI / .NET 8
