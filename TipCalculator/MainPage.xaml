@@ -78,7 +78,7 @@
         >
                 <Button
                 x:Name="QuinzeBtn"
-                Text="15%"
+                Text="151111%"
                 WidthRequest="180"
                 HorizontalOptions="Fill"
                 Clicked="OnQuinzeBtn_Clicked"
