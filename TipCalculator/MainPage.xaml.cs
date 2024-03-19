@@ -8,22 +8,22 @@
             InitializeComponent();
         }
 
-        private void SliderTipPercent_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void SliderTipValue_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            LabelPercentageValue.Text = Math.Round(SliderTipPercent.Value).ToString();
+            tipporcentage.Text = Math.Round(SliderTipPercent.Value).ToString();
         }
 
-        private void OnButton15PercentClicked(object sender, EventArgs e)
+        private void OnQuinzeBtn_Clicked(object sender, EventArgs e)
         {
             SliderTipPercent.Value = 15;
         }
 
-        private void OnButton20PercentClicked(object sender, EventArgs e)
+        private void OnVinteBtn_Clicked(object sender, EventArgs e)
         {
             SliderTipPercent.Value = 20;
         }
 
-        private void OnButtonRoundDownClicked(object sender, EventArgs e)
+        private void OnRounddownBtn_Clicked(object sender, EventArgs e)
         {
             // calcular a gorjeta, arredondando para baixo
             double result = CalculateTip();
@@ -35,7 +35,7 @@
             LabelTotalValue.Text = totalValue.ToString();
         }
 
-        private void OnButtonRoundUpClicked(object sender, EventArgs e)
+        private void OnRoundupBtn_Clicked(object sender, EventArgs e)
         {
             // calcular a gorjeta, arredondando para cima
             double result = CalculateTip();

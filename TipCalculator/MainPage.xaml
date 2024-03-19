@@ -3,61 +3,123 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TipCalculator.MainPage">
 
+
+
     <ScrollView>
         <VerticalStackLayout
-            Padding="10,0"
-            Spacing="10">
+        Padding="30,0"
+        Spacing="20">
 
             <Label
-                Text="Valor da gorjeta"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            x:Name="gorjeta"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1"
+            Text="valor da gorjeta"
+        />
 
             <Entry
-                x:Name="ValueEntry"
-                Placeholder="Digite o valor do pedido"/>
+            x:Name="ValueEntry"
+            Placeholder="Digite o valor do pedido"
+        />
 
-            <Label Text="Tip:"/>
-            <Label Text="0.00" x:Name="LabelTipValue" />
+            <HorizontalStackLayout
+            Spacing="5">
 
-            <Label Text="Total:"/>
-            <Label Text="0.00" x:Name="LabelTotalValue"/>
+                <Label
+            x:Name="tip"
+            Text="Tip:"
+        />
 
-            <Label Text="Tip Percentage:"/>
-            <Label Text="0%" x:Name="LabelPercentageValue"/>
+                <Label
+            x:Name="LabelTipValue"
+            Text="0.00"
+        />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+           Spacing="5" >
+                <Label
+            x:Name="TotalValue"
+            Text="Total:"
+        />
+
+                <Label
+            x:Name="LabelTotalValue"
+            Text="0.00"
+        />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+            Spacing="5">
+
+                <Label
+            x:Name="tipporcentage"
+            Text="Tip porcentage"
+        />
+
+                <Label
+            x:Name="PercentageValue"
+            Text="0.00%"
+        />
+
+            </HorizontalStackLayout>
+
 
             <Slider
-                x:Name="SliderTipPercent"
-                Minimum="0"
-                Maximum="100"
-                ValueChanged="SliderTipPercent_ValueChanged"
-                />
+            x:Name="SliderTipPercent"
+            Maximum="100" Minimum="0" ValueChanged="SliderTipValue_ValueChanged"/>
 
 
-            <Button
-                x:Name="Button15Percent"
-                Text="15%" 
-                HorizontalOptions="Fill" 
-                Clicked="OnButton15PercentClicked"
-                />
 
-            <Button
-                x:Name="Button20Percent"
-                Text="20%" 
+            <HorizontalStackLayout
+            Spacing="10"
+            HorizontalOptions="Center"
+        >
+                <Button
+                x:Name="QuinzeBtn"
+                Text="15%"
+                WidthRequest="180"
                 HorizontalOptions="Fill"
-                Clicked="OnButton20PercentClicked"/>
+                Clicked="OnQuinzeBtn_Clicked"
+                BorderColor="Black"
+                BorderWidth="2"
+                />
 
-            <Button
-                x:Name="ButtonRoundDown"
+                <Button
+                x:Name="OnVinteBtn"
+                Text="20%"
+                WidthRequest="180"
+                HorizontalOptions="Fill"
+                Clicked="OnVinteBtn_Clicked"
+                BorderColor="Black"
+                BorderWidth="2"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+            Spacing="10"
+            HorizontalOptions="Center"
+            >
+
+                <Button
+                x:Name="OnRounddownBtn"
                 Text="Arredondar para baixo" 
                 HorizontalOptions="Fill"
-                Clicked="OnButtonRoundDownClicked"/>
+                Clicked="OnRounddownBtn_Clicked"
+                BorderColor="Black"
+                BorderWidth="2"
+                />
 
-            <Button
-                x:Name="ButtonRoundUp"
+                <Button
+                x:Name="OnRoundupBtn"
                 Text="Arredondar para cima" 
                 HorizontalOptions="Fill"
-                Clicked="OnButtonRoundUpClicked"/>
+                Clicked="OnRoundupBtn_Clicked"
+                BorderColor="Black"
+                BorderWidth="2"             
+                />
+            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
